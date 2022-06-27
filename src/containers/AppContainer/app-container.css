@@ -6,6 +6,16 @@
           transform: translateX(-50%);
   min-width: 30.1rem;
   max-width: 40rem;
-  min-height: 40rem;
+}
+
+.app-container .app-container-todos {
+  margin-top: 1.3rem;
+  border-radius: 0.3rem;
+}
+
+.app-container .app-container-todos:first-child {
+  border-top-left-radius: 0.3rem;
+  border-top-right-radius: 0.3rem;
+  background-color: red;
 }
 /*# sourceMappingURL=app-container.css.map */

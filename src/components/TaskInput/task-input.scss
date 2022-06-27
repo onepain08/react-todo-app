@@ -1,0 +1,24 @@
+@import '../../variables.scss';
+
+.task-input{
+    width: 100%;
+    height: 3.6rem;
+    background-color: #fff;
+    color: $very-dark-grayish-blue;
+    border-radius: 0.3rem;
+    border-bottom: 1px solid $very-light-grayish-blue;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1.2rem;
+    padding: 0 1.3rem;
+
+    .task-item-mark{
+        border-radius: 50%;
+        width: 1.3rem;
+        height: 1.3rem;
+        aspect-ratio: 1;
+        border: 1px solid $very-light-grayish-blue;
+    }
+
+}

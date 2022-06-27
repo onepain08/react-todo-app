@@ -1,0 +1,36 @@
+@import '../../variables.scss';
+
+.filterbar{
+    width: 100%;
+    height: 3rem;
+    padding: 0 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1.3rem;
+    border-bottom-left-radius: 0.3rem;
+    border-bottom-right-radius: 0.3rem;
+
+    h4{
+        font-size: 14px;
+        font-weight: 400;
+        color: $dark-grayish-blue;
+    }
+
+    #item-count{
+        margin-right: 4rem;
+    }
+
+    #filter-all{
+        color: $bright-blue;
+        font-weight: 700;
+    }
+    #filter-active, #filter-completed{
+        font-weight: 700;
+        color: $dark-grayish-blue;
+    }
+
+    #clear-completed{
+        margin-left: auto;
+    }
+}

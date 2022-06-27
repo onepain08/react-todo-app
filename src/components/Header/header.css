@@ -8,6 +8,7 @@ header {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin-bottom: 2.2rem;
 }
 
 header img {
