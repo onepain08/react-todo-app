@@ -3,6 +3,7 @@
 .filterbar{
     width: 100%;
     height: 3rem;
+    background-color: #fff;
     padding: 0 1rem;
     display: flex;
     align-items: center;
@@ -21,16 +22,20 @@
         margin-right: 4rem;
     }
 
-    #filter-all{
-        color: $bright-blue;
-        font-weight: 700;
-    }
-    #filter-active, #filter-completed{
+    
+    .filterbar-filters{
         font-weight: 700;
         color: $dark-grayish-blue;
+        cursor: pointer;
     }
 
     #clear-completed{
         margin-left: auto;
+        cursor: pointer;
+    }
+    .filter-on{
+        color: $bright-blue;
+        font-weight: 700;
+        cursor: pointer;
     }
 }

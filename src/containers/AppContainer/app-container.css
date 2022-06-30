@@ -6,6 +6,8 @@
           transform: translateX(-50%);
   min-width: 30.1rem;
   max-width: 40rem;
+  -webkit-box-shadow: -15px 40px 40px -40px #d9d9d9, 15px 0px 40px -40px #d9d9d9;
+          box-shadow: -15px 40px 40px -40px #d9d9d9, 15px 0px 40px -40px #d9d9d9;
 }
 
 .app-container .app-container-todos {
