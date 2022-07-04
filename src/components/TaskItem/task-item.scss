@@ -40,5 +40,9 @@
 }
 
 .no-display{
-    background-color: red;
+    display: none;
+}
+
+.task-marked{
+    background: $check-background;
 }

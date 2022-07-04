@@ -19,7 +19,7 @@ const AppContainer = () => {
 
   //filter
   const [filter, setFilter] = React.useState('filter-all')
-console.log(filter);
+// console.log(filter);
   // state holding completed notes from notesData state
   // const [notesCompletedData, setNotesCompletedData] = React.useState([])
 
