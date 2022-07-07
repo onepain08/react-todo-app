@@ -1,7 +1,7 @@
 import React from 'react'
 import './task-item.css'
 
-import {iconCross} from '../../assets/assets'
+import {iconCross, iconCheck} from '../../assets/assets'
 
 const TaskItem = (props) => {
 
@@ -14,9 +14,9 @@ const TaskItem = (props) => {
          id={props.id} >
       <div className={props.completed === true ? 'task-item-mark task-marked': 'task-item-mark'}
            onClick={() => props.markCompleted(props.id)}>
-
+        {props.completed &&<img className='task-item-mark-check' src={iconCheck} alt="" />}
       </div>
-      <div>{props.noteContent}</div>
+      <div className={props.completed ? 'task-item-content font-crossed' : 'task-item-content'}>{props.noteContent}</div>
       <img src={iconCross} alt="" onClick={() => {props.deleteHandler(props.id)}} />
     </div>
   )

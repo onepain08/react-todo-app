@@ -25,4 +25,9 @@
   aspect-ratio: 1;
   border: 1px solid #e4e5f1;
 }
+
+.task-input input {
+  width: 100%;
+  outline: none;
+}
 /*# sourceMappingURL=task-input.css.map */

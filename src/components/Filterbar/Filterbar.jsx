@@ -20,7 +20,7 @@ const Filterbar = (props) => {
         className={props.filter === 'filter-completed' ? 'filter-on': 'filterbar-filters'}>
           Completed
         </h4>
-        <h4 id='clear-completed'>Clear Completed</h4>
+        <h4 id='clear-completed' onClick={props.clearCompleted}>Clear Completed</h4>
 
     </div>
   )

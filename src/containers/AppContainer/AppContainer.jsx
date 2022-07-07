@@ -42,6 +42,9 @@ const AppContainer = () => {
     })
   }
   
+  function clearCompleted(){
+    setNotesData(prevNotesData => prevNotesData.filter(note => note.completed !==true))
+  }
   
 
   const notes = notesData.map((note)=>{
@@ -90,7 +93,7 @@ const AppContainer = () => {
         <TaskInput inputText={setInputText} onEnter={appendNote} />
         <div className='app-container-todos'>
           {notes}
-          <Filterbar filter={filter} toggleFilter={toggleFilter} />
+          <Filterbar filter={filter} toggleFilter={toggleFilter} clearCompleted={clearCompleted} />
         </div>
     </div>
   )

@@ -20,5 +20,9 @@
         aspect-ratio: 1;
         border: 1px solid $very-light-grayish-blue;
     }
-
+    
+    input{
+        width: 100%;
+        outline: none;
+    }
 }
