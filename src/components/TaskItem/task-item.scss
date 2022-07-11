@@ -18,7 +18,7 @@
         border-radius: 50%;
         width: 1.3rem;
         height: 1.3rem;
-        border: 2px solid $very-light-grayish-blue;
+        border: 1px solid $very-light-grayish-blue;
         display: flex;
         overflow: hidden;
         
@@ -27,7 +27,7 @@
     }
 
     .task-item-mark:hover{
-        border: 2px solid $bright-blue;
+        border: 1px solid $bright-blue;
        
     }
 

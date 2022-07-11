@@ -22,7 +22,7 @@
   border-radius: 50%;
   width: 1.3rem;
   height: 1.3rem;
-  border: 2px solid #e4e5f1;
+  border: 1px solid #e4e5f1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -30,7 +30,7 @@
 }
 
 .task-item .task-item-mark:hover {
-  border: 2px solid #3a7bfd;
+  border: 1px solid #3a7bfd;
 }
 
 .task-item img {

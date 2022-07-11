@@ -20,20 +20,49 @@
 body {
   min-height: 100vh;
   min-width: 100vw;
-  background-color: #2a2a2a;
 }
 
 .App {
   background-color: #fff;
-  height: 800px;
+  min-height: 100vh;
   min-width: 100%;
-  -webkit-transform: translateY(50px);
-          transform: translateY(50px);
 }
 
 .App .app-bg-image {
   -o-object-fit: contain;
      object-fit: contain;
   width: 100%;
+}
+
+.dark-mode {
+  background-color: #161722;
+}
+
+.dark-mode .task-input {
+  background-color: #25273c;
+}
+
+.dark-mode .task-input .task-item-mark {
+  border: 1px solid #4d5066;
+}
+
+.dark-mode .task-input input {
+  background-color: #25273c;
+  color: #cacde8;
+}
+
+.dark-mode .task-item {
+  background-color: #25273c;
+  color: #cacde8;
+  border-bottom: 1px solid #4d5066;
+}
+
+.dark-mode .task-item .task-item-mark {
+  border: 1px solid #4d5066;
+}
+
+.dark-mode .task-item .font-crossed {
+  text-decoration: line-through;
+  color: #777a92;
 }
 /*# sourceMappingURL=app.css.map */

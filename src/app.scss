@@ -22,16 +22,49 @@
  body{
     min-height: 100vh;
     min-width: 100vw;
-    background-color: rgb(42, 42, 42);
+    // background-color: rgb(42, 42, 42);
  }
  .App{
     background-color: #fff;
-    height: 800px;
+    min-height: 100vh;
     min-width: 100%;
-    transform: translateY(50px);
+    // transform: translateY(50px);
 
     .app-bg-image{
         object-fit:contain;
         width: 100%;
     }
+ }
+
+ .dark-mode{
+    
+    background-color: $very-dark-blue;
+
+    .task-input{
+        background-color: $very-dark-desaturated-blue;
+        
+        .task-item-mark{
+            border: 1px solid $very-dark-grayish-blue;
+        }
+        input{
+            background-color: $very-dark-desaturated-blue;
+            color: $light-grayish-blue;
+        }
+    }
+
+    .task-item{
+        background-color: $very-dark-desaturated-blue;
+        color: $light-grayish-blue;
+        border-bottom: 1px solid $very-dark-grayish-blue;
+
+        .task-item-mark{
+            border: 1px solid $very-dark-grayish-blue;
+        }
+
+        .font-crossed{
+            text-decoration: line-through;
+            color: $dark-grayish-blue;
+        }
+    }
+    
  }

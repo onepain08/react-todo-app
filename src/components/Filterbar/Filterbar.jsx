@@ -4,7 +4,7 @@ import './filterbar.css'
 const Filterbar = (props) => {
   return (
     <div className='filterbar'>
-        <h4 id='item-count'>5 items left</h4>
+        <h4 id='item-count'>{props.notesCount} items left</h4>
         <h4 id='filter-all'
           onClick={() => props.toggleFilter('filter-all')}
           className={props.filter === 'filter-all' ? 'filter-on': 'filterbar-filters'}>

@@ -4,9 +4,9 @@ import './app-container.css'
 //Components
 import {Header, TaskItem, Filterbar, TaskInput} from '../../components/components'
 //Assets
-import { iconMoon } from '../../assets/assets'
+import { iconMoon, iconSun} from '../../assets/assets'
 
-const AppContainer = () => {
+const AppContainer = (props) => {
   
 
   //States:
@@ -19,6 +19,9 @@ const AppContainer = () => {
 
   //filter
   const [filter, setFilter] = React.useState('filter-all')
+
+  
+
 // console.log(filter);
   // state holding completed notes from notesData state
   // const [notesCompletedData, setNotesCompletedData] = React.useState([])
@@ -26,7 +29,7 @@ const AppContainer = () => {
 
 
   function appendNote(){
-    setNotesData(oldNotesData => [...oldNotesData, {noteContent: inputText, id:'note' + notesData.length, completed: false,}])
+    setNotesData(oldNotesData => [...oldNotesData, {noteContent: inputText, id: inputText, completed: false,}])
     
   }
 
@@ -45,6 +48,7 @@ const AppContainer = () => {
   function clearCompleted(){
     setNotesData(prevNotesData => prevNotesData.filter(note => note.completed !==true))
   }
+
   
 
   const notes = notesData.map((note)=>{
@@ -85,16 +89,14 @@ const AppContainer = () => {
   //     />
   //   )
   // })
-
-  
   return (
     <div className='app-container'>
-        <Header icon={iconMoon} />
+        <Header icon={props.darkMode === false ? iconMoon : iconSun} darkModeHandler={props.darkModeHandler} />
         <TaskInput inputText={setInputText} onEnter={appendNote} />
         <div className='app-container-todos'>
           {notes}
-          <Filterbar filter={filter} toggleFilter={toggleFilter} clearCompleted={clearCompleted} />
         </div>
+          <Filterbar notesCount={notesData.length} filter={filter} toggleFilter={toggleFilter} clearCompleted={clearCompleted} />
     </div>
   )
 }
