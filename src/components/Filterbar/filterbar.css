@@ -23,6 +23,10 @@
   color: #777a92;
 }
 
+.filterbar h4:hover {
+  color: #393a4c;
+}
+
 .filterbar #item-count {
   margin-right: 4rem;
 }

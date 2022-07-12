@@ -29,7 +29,7 @@ const AppContainer = (props) => {
 
 
   function appendNote(){
-    setNotesData(oldNotesData => [...oldNotesData, {noteContent: inputText, id: inputText, completed: false,}])
+    setNotesData(oldNotesData => [...oldNotesData, {noteContent: inputText, id: inputText + notesData.length, completed: false,}])
     
   }
 

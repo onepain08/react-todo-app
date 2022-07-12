@@ -21,18 +21,17 @@
         border: 1px solid $very-light-grayish-blue;
         display: flex;
         overflow: hidden;
-        
-        
+        cursor: pointer;
         
     }
 
     .task-item-mark:hover{
-        border: 1px solid $bright-blue;
-       
+        border: 1px solid rgb(33, 154, 194);
     }
 
     img{
         margin-left: auto;
+        cursor: pointer;
     }
 
     .task-item-mark-check{

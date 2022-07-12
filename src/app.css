@@ -38,6 +38,11 @@ body {
   background-color: #161722;
 }
 
+.dark-mode .app-container {
+  -webkit-box-shadow: -15px 40px 40px -40px black, 15px 0px 40px -40px black;
+          box-shadow: -15px 40px 40px -40px black, 15px 0px 40px -40px black;
+}
+
 .dark-mode .task-input {
   background-color: #25273c;
 }
@@ -64,5 +69,20 @@ body {
 .dark-mode .task-item .font-crossed {
   text-decoration: line-through;
   color: #777a92;
+}
+
+.dark-mode .filterbar {
+  background-color: #25273c;
+}
+
+.dark-mode .filterbar h4:hover {
+  color: #e4e5f1;
+}
+
+@media (max-width: 600px) {
+  .App {
+    min-width: 100vw;
+    min-height: 100vh;
+  }
 }
 /*# sourceMappingURL=app.css.map */

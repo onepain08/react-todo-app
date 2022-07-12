@@ -27,14 +27,16 @@
   display: -ms-flexbox;
   display: flex;
   overflow: hidden;
+  cursor: pointer;
 }
 
 .task-item .task-item-mark:hover {
-  border: 1px solid #3a7bfd;
+  border: 1px solid #219ac2;
 }
 
 .task-item img {
   margin-left: auto;
+  cursor: pointer;
 }
 
 .task-item .task-item-mark-check {

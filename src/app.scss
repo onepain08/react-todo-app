@@ -40,6 +40,9 @@
     
     background-color: $very-dark-blue;
 
+    .app-container{
+        box-shadow: -15px 40px 40px -40px black, 15px 0px 40px -40px black;
+    }
     .task-input{
         background-color: $very-dark-desaturated-blue;
         
@@ -65,6 +68,24 @@
             text-decoration: line-through;
             color: $dark-grayish-blue;
         }
+    }
+
+    .filterbar{
+        background-color: $very-dark-desaturated-blue;
+
+        h4:hover{
+            color: $light-grayish-blue-hover;
+        }
+    }
+    
+ }
+
+ @media(max-width: 600px){
+        
+    .App{
+        min-width: 100vw;
+        min-height: 100vh;
+
     }
     
  }
