@@ -63,4 +63,24 @@
   text-decoration: line-through;
   color: #cacde8;
 }
+
+@media (max-width: 600px) {
+  .task-item {
+    min-height: 2.5rem;
+  }
+  .task-item .task-item-content {
+    font-size: 0.7rem;
+    max-width: 20.39rem;
+    word-break: break-all;
+  }
+  .task-item .task-item-mark {
+    min-width: 1.1rem;
+    max-width: 1.1rem;
+    min-height: 1.1rem;
+    max-height: 1.1rem;
+  }
+  .task-item img {
+    width: 0.7rem;
+  }
+}
 /*# sourceMappingURL=task-item.css.map */

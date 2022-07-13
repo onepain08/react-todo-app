@@ -17,4 +17,15 @@
   max-height: 58vh;
   overflow-y: scroll;
 }
+
+@media (max-width: 600px) {
+  .app-container {
+    min-width: 15rem;
+    max-width: 87%;
+    top: 2.5rem;
+  }
+  .app-container .app-container-todos {
+    margin-top: 0.9rem;
+  }
+}
 /*# sourceMappingURL=app-container.css.map */

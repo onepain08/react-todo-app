@@ -2,8 +2,17 @@ import React from 'react'
 import './filterbar.css'
 
 const Filterbar = (props) => {
+
+  
   return (
     <div className='filterbar'>
+      
+      {/* {props.screenWidth <= 600 &&<div className='filterbar-mobile-split'>
+        <h4 id='item-count'>{props.notesCount} items left</h4>
+        <h4 id='clear-completed' onClick={props.clearCompleted}>Clear Completed</h4>
+      </div>} */}
+
+      {/* <div className='filterbar-desktop'> */}
         <h4 id='item-count'>{props.notesCount} items left</h4>
         <h4 id='filter-all'
           onClick={() => props.toggleFilter('filter-all')}
@@ -21,6 +30,7 @@ const Filterbar = (props) => {
           Completed
         </h4>
         <h4 id='clear-completed' onClick={props.clearCompleted}>Clear Completed</h4>
+      {/* </div> */}
 
     </div>
   )

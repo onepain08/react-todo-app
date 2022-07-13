@@ -10,3 +10,21 @@ header{
     }
 
 }
+
+
+@media(max-width: 600px){
+    header{
+        height: 1.7rem;
+        margin-bottom: 1.8rem;
+        h1{
+            font-size: 1.4rem;
+            letter-spacing: 0.6rem;
+        }
+
+        img{
+            margin-bottom: 0;
+            height: 1.1rem;
+            aspect-ratio: 1;
+        }
+    }
+}

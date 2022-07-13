@@ -96,7 +96,7 @@ const AppContainer = (props) => {
         <div className='app-container-todos'>
           {notes}
         </div>
-          <Filterbar notesCount={notesData.length} filter={filter} toggleFilter={toggleFilter} clearCompleted={clearCompleted} />
+          <Filterbar notesCount={notesData.length} filter={filter} screenWidth={props.screenWidth} toggleFilter={toggleFilter} clearCompleted={clearCompleted} />
     </div>
   )
 }

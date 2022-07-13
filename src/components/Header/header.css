@@ -15,4 +15,20 @@ header img {
   margin-bottom: 8px;
   cursor: pointer;
 }
+
+@media (max-width: 600px) {
+  header {
+    height: 1.7rem;
+    margin-bottom: 1.8rem;
+  }
+  header h1 {
+    font-size: 1.4rem;
+    letter-spacing: 0.6rem;
+  }
+  header img {
+    margin-bottom: 0;
+    height: 1.1rem;
+    aspect-ratio: 1;
+  }
+}
 /*# sourceMappingURL=header.css.map */
