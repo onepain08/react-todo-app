@@ -20,9 +20,11 @@
 
 @media (max-width: 600px) {
   .app-container {
-    min-width: 15rem;
+    min-width: 18.5rem;
     max-width: 87%;
     top: 2.5rem;
+    -webkit-box-shadow: 0 0 0 0, 0 0 0 0;
+            box-shadow: 0 0 0 0, 0 0 0 0;
   }
   .app-container .app-container-todos {
     margin-top: 0.9rem;

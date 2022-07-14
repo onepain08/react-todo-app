@@ -1,8 +1,7 @@
-.filterbar {
+.filterbar .filterbar-desktop {
   width: 100%;
   height: 3rem;
   background-color: #fff;
-  padding: 0 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -12,39 +11,128 @@
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+  padding: 0 1rem;
   gap: 1.3rem;
   border-bottom-left-radius: 0.3rem;
   border-bottom-right-radius: 0.3rem;
 }
 
-.filterbar h4 {
+.filterbar .filterbar-desktop h4 {
   font-size: 14px;
   font-weight: 400;
   color: #777a92;
 }
 
-.filterbar h4:hover {
+.filterbar .filterbar-desktop h4:hover {
   color: #393a4c;
 }
 
-.filterbar #item-count {
+.filterbar .filterbar-desktop #item-count {
   margin-right: 4rem;
 }
 
-.filterbar .filterbar-filters {
+.filterbar .filterbar-desktop .filterbar-filters {
   font-weight: 700;
   color: #777a92;
   cursor: pointer;
 }
 
-.filterbar #clear-completed {
+.filterbar .filterbar-desktop #clear-completed {
   margin-left: auto;
   cursor: pointer;
 }
 
-.filterbar .filter-on {
+.filterbar .filterbar-desktop .filter-on {
   color: #3a7bfd;
   font-weight: 700;
   cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .filterbar {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    background-color: transparent;
+    padding: 0 0;
+    gap: 1rem;
+  }
+  .filterbar .filterbar-mobile-split {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0 1.3rem;
+    background-color: #fff;
+    min-height: 2.5rem;
+    min-width: 100%;
+    border-bottom-left-radius: 0.3rem;
+    border-bottom-right-radius: 0.3rem;
+  }
+  .filterbar .filterbar-mobile-split h4 {
+    font-size: 0.7rem;
+    font-weight: 500;
+    color: #cacde8;
+  }
+  .filterbar .filterbar-mobile-split:after {
+    content: '';
+    z-index: -1;
+    width: 90%;
+    height: 1rem;
+    position: absolute;
+    bottom: 70px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    -webkit-box-shadow: 1px 4px 20px #d9d9d9, -1px 4px 20px #d9d9d9;
+            box-shadow: 1px 4px 20px #d9d9d9, -1px 4px 20px #d9d9d9;
+  }
+  .filterbar .filterbar-desktop {
+    min-width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 1rem;
+    margin-top: 0.5rem;
+    background-color: #fff;
+    min-height: 2.5rem;
+    border-radius: 0.3rem;
+  }
+  .filterbar .filterbar-desktop:after {
+    content: '';
+    z-index: -1;
+    width: 90%;
+    height: 2rem;
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    bottom: 0px;
+    -webkit-box-shadow: 2px 4px 30px #d9d9d9, 2px -4px 30px #d9d9d9;
+            box-shadow: 2px 4px 30px #d9d9d9, 2px -4px 30px #d9d9d9;
+  }
 }
 /*# sourceMappingURL=filterbar.css.map */

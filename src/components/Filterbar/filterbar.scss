@@ -1,60 +1,113 @@
 @import '../../variables.scss';
 
-.filterbar{
-    width: 100%;
-    height: 3rem;
-    background-color: #fff;
-    padding: 0 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 1.3rem;
-    border-bottom-left-radius: 0.3rem;
-    border-bottom-right-radius: 0.3rem;
+    .filterbar{
+        .filterbar-desktop{
+            width: 100%;
+            height: 3rem;
+            background-color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 0 1rem;
+            gap: 1.3rem;
+            border-bottom-left-radius: 0.3rem;
+            border-bottom-right-radius: 0.3rem;
+        
+            h4{
+                font-size: 14px;
+                font-weight: 400;
+                color: $dark-grayish-blue;
+            }
+            h4:hover{
+                color: $very-dark-grayish-blue-hover;
+            }
+        
+            #item-count{
+                margin-right: 4rem;
+            }
+        
+            
+            .filterbar-filters{
+                font-weight: 700;
+                color: $dark-grayish-blue;
+                cursor: pointer;
+            }
+        
+            #clear-completed{
+                margin-left: auto;
+                cursor: pointer;
+            }
+            .filter-on{
+                color: $bright-blue;
+                font-weight: 700;
+                cursor: pointer;
+            }
+        }
 
-    h4{
-        font-size: 14px;
-        font-weight: 400;
-        color: $dark-grayish-blue;
-    }
-    h4:hover{
-        color: $very-dark-grayish-blue-hover;
     }
 
-    #item-count{
-        margin-right: 4rem;
-    }
 
-    
-    .filterbar-filters{
-        font-weight: 700;
-        color: $dark-grayish-blue;
-        cursor: pointer;
-    }
+@media(max-width: 600px){
+    .filterbar{
+        flex-direction: column;
+        height: fit-content;
+        background-color: transparent;
+        padding: 0 0;
+        gap: 1rem;
+        // border-bottom-left-radius: 1rem;
+        // border-bottom-right-radius: 1rem;
 
-    #clear-completed{
-        margin-left: auto;
-        cursor: pointer;
-    }
-    .filter-on{
-        color: $bright-blue;
-        font-weight: 700;
-        cursor: pointer;
+        .filterbar-mobile-split{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 1.3rem;
+            background-color: #fff;
+            min-height: 2.5rem;
+            min-width: 100%;
+            border-bottom-left-radius: 0.3rem;
+            border-bottom-right-radius: 0.3rem;
+            
+            h4{
+                font-size: 0.7rem;
+                font-weight: 500;
+                color: $light-grayish-blue;
+            }
+        }
+        .filterbar-mobile-split:after{
+            content: '';
+            z-index: -1;
+            width: 90%;
+            height: 1rem;
+            position: absolute;
+            bottom: 70px;
+            left: 50%;
+            transform: translateX(-50%);
+            box-shadow: 1px 4px 20px $shadow-grey, -1px 4px 20px $shadow-grey
+        }
+        .filterbar-desktop{
+            min-width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            margin-top: 0.5rem;
+            background-color: #fff;
+            min-height: 2.5rem;
+            border-radius: 0.3rem;
+        }
+        .filterbar-desktop:after{
+            content: '';
+            z-index: -1;
+            width: 90%;
+            height: 2rem;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 0px;
+            box-shadow: 2px 4px 30px $shadow-grey, 2px -4px 30px $shadow-grey
+        }
     }
 }
-
-// @media(max-width: 600px){
-//     .filterbar{
-//         display: flex;
-//         flex-direction: column;
-//         .filterbar-desktop{
-//             max-width: 20.39rem;
-//             display: flex;
-//             flex-direction: row;
-//         }
-
-//         .filterbar-mobile-split{
-//             max-width: 20.39rem;
-//         }
-//     }
-// }

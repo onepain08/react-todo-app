@@ -71,11 +71,11 @@ body {
   color: #777a92;
 }
 
-.dark-mode .filterbar {
+.dark-mode .filterbar, .dark-mode .filterbar-desktop, .dark-mode .filterbar-mobile-split {
   background-color: #25273c;
 }
 
-.dark-mode .filterbar h4:hover {
+.dark-mode .filterbar h4:hover, .dark-mode .filterbar-desktop h4:hover, .dark-mode .filterbar-mobile-split h4:hover {
   color: #e4e5f1;
 }
 
