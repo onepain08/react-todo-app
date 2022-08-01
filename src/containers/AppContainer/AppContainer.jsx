@@ -1,30 +1,30 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './app-container.css'
 
 //Components
 import {Header, TaskItem, Filterbar, TaskInput} from '../../components/components'
 //Assets
 import { iconMoon, iconSun} from '../../assets/assets'
+import { AnimatePresence } from 'framer-motion'
 
 const AppContainer = (props) => {
   
-
   //States:
 
   //input state from <TaskInput />
   const [inputText, setInputText] = React.useState()
-
+  
   // state holding all notes/ <TaskItem />
-  const [notesData, setNotesData] = React.useState([])
+  const [notesData, setNotesData] = React.useState(JSON.parse(localStorage.getItem('notesData')) || [])
 
   //filter
   const [filter, setFilter] = React.useState('filter-all')
 
   
-
-// console.log(filter);
-  // state holding completed notes from notesData state
-  // const [notesCompletedData, setNotesCompletedData] = React.useState([])
+  //Local storage
+ useEffect(() => {
+  localStorage.setItem('notesData', JSON.stringify(notesData))
+ },[notesData])
 
 
 
@@ -53,13 +53,18 @@ const AppContainer = (props) => {
 
   const notes = notesData.map((note)=>{
       return (
-        <TaskItem key={note.id}
-        id={note.id}
-        noteContent={note.noteContent}
-        completed={note.completed}
-        filter={filter}
-        deleteHandler={deleteNote}
-        markCompleted={markCompleted}
+        <TaskItem
+          key={note.id}
+          id={note.id}
+          notesData={notesData}
+          setNotesData={setNotesData}
+          noteContent={note.noteContent}
+          completed={note.completed}
+          filter={filter}
+          deleteHandler={deleteNote}
+          markCompleted={markCompleted}
+          onDragStart={dragStart}
+          onDragEnter={dragEnter}
         />
       )
   })
@@ -70,31 +75,48 @@ const AppContainer = (props) => {
     setFilter(() => id)
   }
 
-  // function filterCompleted(notesData){
-  //   setNotesCompletedData( () => {
-  //     return notesData.map(note => {
-  //       return note.completed ? {...note} : {}
-  //     })
-  //   })
-  // }  
+  // Drag and drop
 
-  // const notesCompleted = notesCompletedData.map(note => {
-  //   return(
-  //     <TaskItem 
-  //       id={note.id}
-  //       noteContent={note.noteContent}
-  //       completed={false}
-  //       deleteHandler={deleteNote}
-  //       markCompleted={markCompleted}
-  //     />
-  //   )
-  // })
+  let hoveredItemID = ''
+
+  function dragStart(e){
+    console.log(e.target.id)
+    e.dataTransfer.setData('dragID', e.target.id)
+  }
+
+  function dragEnter(e){
+    // console.log(e.target.id);
+    hoveredItemID = e.target.id
+    return hoveredItemID
+  }
+
+  function dragover(e){
+    e.preventDefault()
+  }
+
+  function drop(e){
+    e.preventDefault()
+    const dragID = e.dataTransfer.getData('dragID')
+
+    setNotesData(oldNotesData => {
+      let singleOutDragged = oldNotesData.filter(note => note.id === dragID)
+      let newNotesData = oldNotesData.filter(note => note.id !== dragID)
+      let index = newNotesData.findIndex(note => note.id === hoveredItemID)
+      newNotesData.splice(index, 0, singleOutDragged[0])
+      return newNotesData
+    })
+  }
+
+ 
   return (
-    <div className='app-container'>
+    <div className='app-container' onDrop={drop} onDragOver={dragover}>
         <Header icon={props.darkMode === false ? iconMoon : iconSun} darkModeHandler={props.darkModeHandler} />
-        <TaskInput inputText={setInputText} onEnter={appendNote} />
+        <TaskInput input={inputText} inputText={setInputText} onEnter={appendNote} />
         <div className='app-container-todos'>
+          <AnimatePresence>
+
           {notes}
+          </AnimatePresence>
         </div>
           <Filterbar notesCount={notesData.length} filter={filter} screenWidth={props.screenWidth} toggleFilter={toggleFilter} clearCompleted={clearCompleted} />
     </div>

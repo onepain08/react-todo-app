@@ -20,8 +20,10 @@
 
 .task-item .task-item-mark {
   border-radius: 50%;
-  width: 1.3rem;
-  height: 1.3rem;
+  min-width: 1.3rem;
+  max-width: 1.3rem;
+  min-height: 1.3rem;
+  max-height: 1.3rem;
   border: 1px solid #e4e5f1;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -46,8 +48,8 @@
 }
 
 .task-item .task-item-content {
-  word-break: keep-all;
-  max-width: 30rem;
+  word-break: break-all;
+  max-width: 28rem;
 }
 
 .no-display {

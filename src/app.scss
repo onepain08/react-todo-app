@@ -34,11 +34,22 @@
         object-fit:contain;
         width: 100%;
     }
+
+    .drag-and-drop{
+        position: absolute;
+        bottom: 3rem;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 0.9rem;
+        font-weight: 400;
+        color: $dark-grayish-blue;
+    }
  }
 
  .dark-mode{
     
     background-color: $very-dark-blue;
+
 
     .app-container{
         box-shadow: -15px 40px 40px -40px black, 15px 0px 40px -40px black;
@@ -70,11 +81,24 @@
         }
     }
 
-    .filterbar,.filterbar-desktop,.filterbar-mobile-split{
-        background-color: $very-dark-desaturated-blue;
+    .filterbar{
 
         h4:hover{
             color: $light-grayish-blue-hover;
+        }
+        .filterbar-mobile-split{
+            background-color: $very-dark-desaturated-blue
+        }
+        .filterbar-mobile-split:after{
+            box-shadow: 1px 4px 20px black, -1px 4px 20px black
+
+        }
+        .filterbar-desktop{
+            background-color: $very-dark-desaturated-blue
+        }
+        .filterbar-desktop:after{
+            box-shadow: 1px 4px 20px black, -1px 4px 20px black
+
         }
     }
     
@@ -85,6 +109,12 @@
     .App{
         min-width: 100vw;
         min-height: 100vh;
+
+        .drag-and-drop{
+            
+            font-size: 0.7rem;
+            font-weight: 400;
+        }
     }
     
  }

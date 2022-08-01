@@ -34,6 +34,17 @@ body {
   width: 100%;
 }
 
+.App .drag-and-drop {
+  position: absolute;
+  bottom: 3rem;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: #777a92;
+}
+
 .dark-mode {
   background-color: #161722;
 }
@@ -71,18 +82,36 @@ body {
   color: #777a92;
 }
 
-.dark-mode .filterbar, .dark-mode .filterbar-desktop, .dark-mode .filterbar-mobile-split {
+.dark-mode .filterbar h4:hover {
+  color: #e4e5f1;
+}
+
+.dark-mode .filterbar .filterbar-mobile-split {
   background-color: #25273c;
 }
 
-.dark-mode .filterbar h4:hover, .dark-mode .filterbar-desktop h4:hover, .dark-mode .filterbar-mobile-split h4:hover {
-  color: #e4e5f1;
+.dark-mode .filterbar .filterbar-mobile-split:after {
+  -webkit-box-shadow: 1px 4px 20px black, -1px 4px 20px black;
+          box-shadow: 1px 4px 20px black, -1px 4px 20px black;
+}
+
+.dark-mode .filterbar .filterbar-desktop {
+  background-color: #25273c;
+}
+
+.dark-mode .filterbar .filterbar-desktop:after {
+  -webkit-box-shadow: 1px 4px 20px black, -1px 4px 20px black;
+          box-shadow: 1px 4px 20px black, -1px 4px 20px black;
 }
 
 @media (max-width: 600px) {
   .App {
     min-width: 100vw;
     min-height: 100vh;
+  }
+  .App .drag-and-drop {
+    font-size: 0.7rem;
+    font-weight: 400;
   }
 }
 /*# sourceMappingURL=app.css.map */
